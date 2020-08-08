@@ -17,7 +17,7 @@ func main() {
 	app.Use(middleware.Logger())
 	app.Use(middleware.Recover())
 	controller.RegisterRoutes(app)
-	app.Listen(4000)
+	app.Listen(8080)
 }
 
 func errorHandler(ctx *fiber.Ctx, err error) {
