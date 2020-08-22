@@ -14,6 +14,7 @@ type customError struct {
 func main() {
 	app := fiber.New()
 	app.Settings.ErrorHandler = errorHandler
+	app.Settings.DisableStartupMessage = true
 	app.Use(middleware.Logger())
 	app.Use(middleware.Recover())
 	controller.RegisterRoutes(app)

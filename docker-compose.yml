@@ -1,0 +1,12 @@
+version: '3'
+services:
+    web:
+        image: allanfvc/uni7sum:1.1.0
+        ports: 
+            - "8081:8080"
+        environment:
+            - OTHER_ENDPOINT=http://mourao:8080/demo/sum
+    mourao:
+        image: "marcelormourao/uni7-cloud-native:1.0.0"
+        ports: 
+            - "8080:8080"
